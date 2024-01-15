@@ -1,6 +1,10 @@
 ---
 #alx-backend-python
-<img src="https://imgur.com/a/Nfok7c2" alt="alx-backend-python">
+
+![alx-backend-python](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...rest_of_base64_encoded_image_data...)
+
+In the context of web development, "backend" typically refers to the server-side of an application...
+
 
  
 In the context of web development, "backend" typically refers to the server-side of an application. The backend handles tasks such as processing data, interacting with databases, and managing user authentication. Python is a popular programming language for building the backend of web applications due to its simplicity, readability, and a variety of frameworks such as Django and Flask.
