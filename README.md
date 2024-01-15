@@ -1,7 +1,7 @@
 ---
 #alx-backend-python
 
-![alx-backend-python](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...rest_of_base64_encoded_image_data...)
+![image 1](https://imgur.com/a/Nfok7c2)
 
 In the context of web development, "backend" typically refers to the server-side of an application...
 
