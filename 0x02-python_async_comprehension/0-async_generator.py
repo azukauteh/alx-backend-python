@@ -23,6 +23,6 @@ async def print_yielded_values():
     result = []
     async for i in async_generator():
         result.append(i)
-    print(result)
+    print(f"Function looped {len(result)} times.")
 
 asyncio.run(print_yielded_values())
