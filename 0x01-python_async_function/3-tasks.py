@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
+"""
+Defines a function that creates an asynchronous task
+"""
 import asyncio
-from typing import Union
+
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def wait_random(max_delay: int = 10) -> float:
-    import random
-    random_delay = random.uniform(0, max_delay)
-    return random_delay
-
-async def run_wait_random(max_delay: int, future: asyncio.Future) -> None:
-    result = wait_random(max_delay)
-    future.set_result(result)
-
-def task_wait_random(max_delay: int) -> asyncio.Future[Union[None, float]]:
-    loop = asyncio.get_event_loop()
-    future = loop.create_future()
-    
-    asyncio.ensure_future(run_wait_random(max_delay, future))
-    
-    return future
+def task_wait_random(max_delay: int) -> asyncio.Task:
+    """
+    Takes an integer and returns an asyncio task
+    Args:
+        max_delay (int)
+    Returns:
+        task: An asynchronous task
+    """
+    return asyncio.create_task(wait_random(max_delay))
