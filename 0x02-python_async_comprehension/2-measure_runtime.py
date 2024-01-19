@@ -1,28 +1,19 @@
 #!/usr/bin/env python3
-"""Defines  2-measure_runtime.py"""
+"""
+Defines a concurrency of 4 Asynchronous Comprehension operations
+"""
+import time
 import asyncio
-from typing import List
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
     """
-    Asynchronous coroutine that executes async_comprehension
-    four times in parallel
-    using asyncio.gather. Measures the total runtime and returns it.
+    Collect 10 random numbers using an async comprehensing,
+    then return the 10 random numbers.
     """
-    start_time = asyncio.get_event_loop().time()
-
-    """ Execute async_comprehension four times in parallel"""
-    await asyncio.gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension()
-    )
-
-    end_time = asyncio.get_event_loop().time()
-    total_runtime = end_time - start_time
-
-    return total_runtime
+    start: float = time.perf_counter()
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    end: float = time.perf_counter()
+    return (end - start)
