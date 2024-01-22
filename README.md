@@ -1,7 +1,20 @@
 ---
 #alx-backend-python
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your HTML Page</title>
+</head>
+<body>
 
-![image 1](https://imgur.com/a/Nfok7c2)
+    <img src="https://imgur.com/a/Nfok7c2" alt="Image 1">
+
+</body>
+</html>
+
+
 
 In the context of web development, "backend" typically refers to the server-side of an application...
 
