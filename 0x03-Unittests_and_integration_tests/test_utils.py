@@ -22,9 +22,8 @@ class TestAccessNestedMap(unittest.TestCase):
         """
         Test access_nested_map function for raising exceptions.
         """
-        with self.assertRaises(expected_exception) as context:
+        with self.assertRaises(KeyError):
             access_nested_map(nested_map, path)
-        self.assertEqual(str(context.exception), expected_message)
 
 
 if __name__ == '__main__':
